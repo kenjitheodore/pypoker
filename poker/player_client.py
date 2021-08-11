@@ -33,7 +33,7 @@ class PlayerClient:
 
 
 class PlayerClientConnector:
-    CONNECTION_TIMEOUT = 30
+    CONNECTION_TIMEOUT = 120
 
     def __init__(self, redis: Redis, connection_channel: str, logger):
         self._redis = redis

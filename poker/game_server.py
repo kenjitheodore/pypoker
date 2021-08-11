@@ -42,6 +42,7 @@ class GameServer:
         self._lobby_lock.acquire()
         try:
             room = self.__get_room(room_id)
+            print(str(room_id))
             room.join(player)
             return room
         finally:
