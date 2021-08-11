@@ -83,6 +83,7 @@ class GameRoomEventHandler:
     def __init__(self, room_players: GameRoomPlayers, room_id: str, logger):
         self._room_players: GameRoomPlayers = room_players
         self._room_id: str = room_id
+        print("kk. roomId2 " + str(room_id))
         self._logger = logger
 
     def room_event(self, event, player_id):
@@ -128,14 +129,14 @@ class GameRoom(GameSubscriber):
         try:
             try:
                 self._room_players.add_player(player)
-                print("new: "+str(player.id))
+                print("kk. new: "+str(player.id))
                 self._room_event_handler.room_event("player-added", player.id)
                 
             except DuplicateRoomPlayerException:
                 old_player = self._room_players.get_player(player.id)
                 old_player.update_channel(player)
                 player = old_player
-                print("old: "+str(player.id))
+                print("kk. old: "+str(player.id))
                 self._room_event_handler.room_event("player-rejoined", player.id)
 
             for event_message in self._event_messages:

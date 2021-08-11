@@ -25,7 +25,7 @@ class GameServerTest(unittest.TestCase):
                         GameServerTest.NoOpChannel(),
                         id="player-{}".format(i),
                         name="Player {}".format(i),
-                        money=1000.0,
+                        money=10000.0,
                         logger=mock.Mock()
                     )
                 )
