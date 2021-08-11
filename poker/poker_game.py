@@ -134,7 +134,7 @@ class GameScores:
 class GamePots:
     class GamePot:
         def __init__(self):
-            self._money = 0.0
+            self._money = 100.0
             self._players: List[Player] = []
 
         def add_money(self, money: float):
