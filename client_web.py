@@ -40,7 +40,7 @@ def join():
     room_id = request.form["room-id"]
     session["player-id"] = str(uuid.uuid4())
     session["player-name"] = name
-    session["player-money"] = 1000
+    session["player-money"] = 10000
     session["room-id"] = room_id if room_id else None
     return redirect(url_for("index"))
 
