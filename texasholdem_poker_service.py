@@ -10,7 +10,7 @@ from poker.poker_game_holdem import HoldemPokerGameFactory
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG if 'DEBUG' in os.environ else logging.INFO)
     logger = logging.getLogger()
-    print("Testing only.")
+    #print("Testing only.")
 
     redis_url = os.environ["REDIS_URL"]
     redis = redis.from_url(redis_url)

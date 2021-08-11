@@ -55,6 +55,7 @@ class PlayerClientConnector:
                 "room_id": room_id
             }
         )
+        print(str(player.money))
 
         server_channel = ChannelRedis(
             self._redis,
