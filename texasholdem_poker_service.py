@@ -20,8 +20,8 @@ if __name__ == '__main__':
         room_factory=GameRoomFactory(
             room_size=10,
             game_factory=HoldemPokerGameFactory(
-                big_blind=40.0,
-                small_blind=20.0,
+                big_blind=20.0,
+                small_blind=10.0,
                 logger=logger,
                 game_subscribers=[]
             )
